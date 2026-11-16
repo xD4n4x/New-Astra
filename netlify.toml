@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/api/solar-system-2d"
+  to = "/data/solar_system_2d.json"
+  status = 200

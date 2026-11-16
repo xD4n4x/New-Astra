@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Astra // Simulador del Sistema Solar 3D - Hardware Espacial</title>
+    <link rel="icon" type="image/jpeg" href="/static/img/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Inter:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="solar-2d-body">
+
+    <div id="canvas-wrapper"></div>
+
+    <header class="hud-top-bar">
+        <div class="logo-area">
+            <img src="/static/img/logo.jpg" alt="Logo New Astra" class="app-logo-img" />
+            <div class="title-text">
+                <h1 class="logo-title">NEW ASTRA</h1>
+                <p>SIMULADOR 3D // HARDWARE ABANDONADO</p>
+            </div>
+        </div>
+
+        <div class="simulation-controls">
+            <div class="control-group">
+                <button id="btn-play-pause" class="sim-btn" title="Pausar / Reanudar">⏸</button>
+                <button class="sim-speed-btn active" data-speed="1">1x</button>
+                <button class="sim-speed-btn" data-speed="2">2x</button>
+                <button class="sim-speed-btn" data-speed="5">5x</button>
+                <button class="sim-speed-btn" data-speed="10">10x</button>
+            </div>
+
+            <div class="control-separator"></div>
+
+            <div class="control-group">
+                <button id="btn-zoom-in" class="sim-btn" title="Acercar">+</button>
+                <button id="btn-zoom-out" class="sim-btn" title="Alejar">−</button>
+                <button id="btn-reset-view" class="sim-btn" title="Restablecer Vista General">🎯 Reset</button>
+            </div>
+
+            <div class="control-separator"></div>
+
+            <div class="control-group">
+                <select id="planet-selector" class="sim-select">
+                    <option value="">🪐 Seleccionar Planeta...</option>
+                    <option value="mercury">Mercurio (2 hardwares)</option>
+                    <option value="venus">Venus (3 hardwares)</option>
+                    <option value="earth">Tierra (4 hardwares)</option>
+                    <option value="mars">Marte (5 hardwares)</option>
+                    <option value="ceres">Ceres (1 hardware)</option>
+                    <option value="jupiter">Júpiter (3 hardwares)</option>
+                    <option value="saturn">Saturno (3 hardwares)</option>
+                    <option value="uranus">Urano (1 hardware)</option>
+                    <option value="neptune">Neptuno (1 hardware)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="hint-pill">
+            <span class="pulse-icon">👆</span>
+            <span>Pasa el cursor sobre un planeta para ver sus hardwares</span>
+        </div>
+    </header>
+
+    <aside id="planet-card" class="boceto-card left-card" style="display: none;">
+        <div class="card-corner-ribbon"></div>
+        <div class="boceto-card-header">
+            <h2 id="planet-card-title">Júpiter</h2>
+            <div class="header-line"></div>
+        </div>
+        <div class="boceto-card-body">
+            <div class="planet-thumb-wrapper">
+                <img id="planet-card-img" src="" alt="Imagen oficial del planeta" />
+                <div class="thumb-badge">FOTO OFICIAL NASA</div>
+            </div>
+            <div class="planet-facts-grid" id="planet-facts-container"></div>
+            <p id="planet-card-desc" class="boceto-card-desc"></p>
+        </div>
+        <div class="boceto-card-footer">
+            <span class="footer-tag">🛰️ HARDWARE DETECTADO:</span>
+            <span id="planet-hardware-count" class="footer-count">3 naves</span>
+        </div>
+    </aside>
+
+    <aside id="hardware-card" class="boceto-card right-card" style="display: none;">
+        <div class="card-corner-yellow"></div>
+        <div class="boceto-card-header hardware-header">
+            <h3 id="hardware-card-name">Hardware name</h3>
+            <span id="hardware-card-status" class="status-badge">Desorbitado</span>
+        </div>
+        <div class="boceto-card-body">
+            <div class="hardware-thumb-wrapper">
+                <img id="hardware-card-img" src="" alt="Fotografía o esquema del hardware" />
+                <div class="hardware-meta-row">
+                    <span id="hardware-type-label">Orbitador y Sonda</span>
+                    <span id="hardware-year-label">1989 - 2003</span>
+                </div>
+            </div>
+            <p id="hardware-card-desc" class="boceto-card-desc"></p>
+            <button id="btn-inspect-hardware" class="hud-inspect-btn">🔍 INSPECCIONAR NAVE EN 3D (360°)</button>
+        </div>
+        <div class="boceto-card-footer hardware-footer">
+            <span class="footer-prompt">💡 Haz clic para inspeccionar componentes</span>
+        </div>
+    </aside>
+
+    <div id="inspector-modal" class="inspector-overlay" style="display: none;">
+        <div class="inspector-container">
+            <div class="inspector-header">
+                <div class="inspector-titles">
+                    <span class="inspector-badge">NEW ASTRA // VISOR DE ARQUEOLOGÍA ESPACIAL</span>
+                    <h2 id="inspector-ship-name">Pioneer 10</h2>
+                    <p id="inspector-ship-type">Explorador de Espacio Profundo · 1972 - 2003</p>
+                </div>
+                <button id="inspector-close-btn" class="inspector-close">&times; Volver al Sistema Solar</button>
+            </div>
+            
+            <div class="inspector-workspace">
+                <div id="inspector-3d-viewport">
+                    <div class="inspector-instructions">
+                        <span>🖱️ Arrastra para rotar en 360° · Rueda para zoom · Haz clic en los componentes</span>
+                    </div>
+                </div>
+
+                <aside class="inspector-sidebar">
+                    <div class="spec-group">
+                        <h3>ESPECIFICACIONES DE INGENIERÍA</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Masa de Lanzamiento:</span>
+                                <span class="spec-val" id="spec-mass">--</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Fuente de Energía:</span>
+                                <span class="spec-val" id="spec-power">--</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Estado Terminal:</span>
+                                <span class="spec-val" id="spec-status">--</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-group components-group">
+                        <h3>ANATOMÍA DE LA NAVE & COMPONENTES</h3>
+                        <div class="components-list" id="inspector-components-list"></div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <footer class="hud-bottom-tip">
+        <span>Arrastra para rotar la cámara 3D · Clic derecho para mover la vista · Rueda del ratón para zoom · Clic en planeta para enfocar</span>
+    </footer>
+
+    <script src="/static/lib/three.min.js"></script>
+    <script src="/static/lib/OrbitControls.js"></script>
+    <script src="/static/js/newAstra3D.js"></script>
+</body>
+</html>

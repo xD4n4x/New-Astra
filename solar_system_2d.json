@@ -1,0 +1,482 @@
+{
+  "system": {
+    "name": "Sistema Solar",
+    "description": "Simulador interactivo 2D del Sistema Solar y cementerio espacial de hardware de la NASA."
+  },
+  "planets": [
+    {
+      "id": "mercury",
+      "name": "Mercurio",
+      "subtitle": "El planeta más cercano al Sol",
+      "color": "#a8a29e",
+      "radius": 14,
+      "orbitDistance": 110,
+      "orbitalSpeed": 0.024,
+      "image": "https://images-assets.nasa.gov/image/PIA11364/PIA11364~thumb.jpg",
+      "fallbackImage": "mercury",
+      "description": "El planeta más pequeño del Sistema Solar y el más cercano al Sol. Carece de atmósfera significativa y su superficie está cubierta de cráteres de impacto similares a los de la Luna.",
+      "facts": {
+        "Distancia al Sol": "0.39 UA (~58M km)",
+        "Período orbital": "88 días terrestres",
+        "Temperatura": "-180°C a 430°C",
+        "Hardware detectado": "2 artefactos"
+      },
+      "hardwares": [
+        {
+          "id": "messenger",
+          "name": "MESSENGER",
+          "type": "Orbitador e Impactador",
+          "mission": "Primer orbitador de Mercurio",
+          "status": "Impactó contra la superficie",
+          "year": "2004 - 2015",
+          "icon": "satellite",
+          "image": "https://images-assets.nasa.gov/image/PIA19420/PIA19420~thumb.jpg",
+          "shortInfo": "Tras 4 años estudiando la geología y campo magnético de Mercurio, agotó su combustible y colisionó deliberadamente contra la superficie a más de 14.000 km/h en abril de 2015."
+        },
+        {
+          "id": "mariner10",
+          "name": "Mariner 10",
+          "type": "Sonda de Sobrevuelo",
+          "mission": "Primeros sobrevuelos de Mercurio",
+          "status": "Inerte en órbita solar",
+          "year": "1973 - 1975",
+          "icon": "probe",
+          "image": "https://images-assets.nasa.gov/image/PIA03103/PIA03103~thumb.jpg",
+          "shortInfo": "Primera nave espacial que utilizó la asistencia gravitatoria de un planeta (Venus) para alcanzar otro. Mapeó el 45% de la superficie antes de agotar su gas de orientación."
+        }
+      ]
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "subtitle": "El gemelo infernal de la Tierra",
+      "color": "#f59e0b",
+      "radius": 22,
+      "orbitDistance": 165,
+      "orbitalSpeed": 0.018,
+      "image": "https://images-assets.nasa.gov/image/PIA00271/PIA00271~thumb.jpg",
+      "fallbackImage": "venus",
+      "description": "Mundo cubierto por una densa capa de nubes de ácido sulfúrico con un efecto invernadero desbocado y presiones atmosféricas capaces de aplastar submarinos.",
+      "facts": {
+        "Distancia al Sol": "0.72 UA (~108M km)",
+        "Período orbital": "225 días terrestres",
+        "Temperatura media": "465°C",
+        "Hardware detectado": "3 artefactos"
+      },
+      "hardwares": [
+        {
+          "id": "magellan",
+          "name": "Magallanes (Magellan)",
+          "type": "Orbitador con Radar SAR",
+          "mission": "Mapeo radar global de Venus",
+          "status": "Desorbitado en atmósfera",
+          "year": "1989 - 1994",
+          "icon": "satellite",
+          "image": "https://images-assets.nasa.gov/image/PIA00036/PIA00036~thumb.jpg",
+          "shortInfo": "Reveló que el 85% de Venus está cubierto por coladas de lava volcánica. En 1994 se sumergió intencionalmente en la atmósfera durante el experimento 'Windmill'."
+        },
+        {
+          "id": "pioneer_venus",
+          "name": "Pioneer Venus Multiprobe",
+          "type": "Sondas de Entrada Atmosférica",
+          "mission": "Análisis atmosférico in-situ",
+          "status": "Impacto / Desintegración",
+          "year": "1978",
+          "icon": "probe",
+          "image": "https://images-assets.nasa.gov/image/ARC-1978-AC78-0288/ARC-1978-AC78-0288~thumb.jpg",
+          "shortInfo": "Liberó 4 sondas (una grande y tres pequeñas) que transmitieron datos cruciales sobre la composición química de la atmósfera antes del impacto térmico terminal."
+        },
+        {
+          "id": "mariner2",
+          "name": "Mariner 2",
+          "type": "Sonda de Exploración",
+          "mission": "Primer sobrevuelo exitoso a Venus",
+          "status": "Inerte en órbita solar",
+          "year": "1962",
+          "icon": "probe",
+          "image": "https://images-assets.nasa.gov/image/PIA02986/PIA02986~thumb.jpg",
+          "shortInfo": "Confirmó las temperaturas extremas de Venus y la ausencia de un campo magnético significativo, pasando a la historia como el primer éxito interplanetario de la humanidad."
+        }
+      ]
+    },
+    {
+      "id": "earth",
+      "name": "Tierra",
+      "subtitle": "El planeta azul y su órbita",
+      "color": "#3b82f6",
+      "radius": 24,
+      "orbitDistance": 225,
+      "orbitalSpeed": 0.014,
+      "image": "https://images-assets.nasa.gov/image/PIA18033/PIA18033~thumb.jpg",
+      "fallbackImage": "earth",
+      "description": "El único mundo conocido con vida activa y océanos superficiales de agua líquida. Su órbita alberga miles de fragmentos de satélites históricos y sondas inertes.",
+      "facts": {
+        "Distancia al Sol": "1.00 UA (~150M km)",
+        "Período orbital": "365.25 días",
+        "Satélite natural": "La Luna",
+        "Hardware detectado": "4 artefactos"
+      },
+      "hardwares": [
+        {
+          "id": "image_sat",
+          "name": "IMAGE (Explorer 78)",
+          "type": "Satélite Científico Magnetosférico",
+          "mission": "Mapeo 3D de la magnetosfera",
+          "status": "Señal fantasma detectada en 2018",
+          "year": "2000 - 2005",
+          "icon": "satellite",
+          "image": "https://images-assets.nasa.gov/image/GSFC_20171208_archive_e000427/GSFC_20171208_archive_e000427~thumb.jpg",
+          "shortInfo": "Dado por perdido en 2005 tras un fallo eléctrico. En 2018 un radioaficionado detectó por sorpresa su señal periódica en 2271.2 MHz aún orbitando la Tierra."
+        },
+        {
+          "id": "vanguard1",
+          "name": "Vanguard 1",
+          "type": "Microsatélite Geodésico",
+          "mission": "Primer satélite con energía solar",
+          "status": "El satélite más antiguo en órbita",
+          "year": "1958 - Presente",
+          "icon": "satellite",
+          "image": "https://images-assets.nasa.gov/image/S58-00508/S58-00508~thumb.jpg",
+          "shortInfo": "Lanzado en 1958. Enmudeció en 1964, pero continuará orbitando silenciosamente la Tierra durante más de 600 años como una cápsula del tiempo espacial."
+        },
+        {
+          "id": "kepler_earth",
+          "name": "Telescopio Kepler",
+          "type": "Observatorio Espacial de Exoplanetas",
+          "mission": "Búsqueda de planetas habitables",
+          "status": "Deriva heliocéntrica tras la Tierra",
+          "year": "2009 - 2018",
+          "icon": "telescope",
+          "image": "https://images-assets.nasa.gov/image/PIA22780/PIA22780~thumb.jpg",
+          "shortInfo": "Descubrió más de 2.600 mundos distantes. En 2018 agotó su hidracina y la NASA le envió la orden final de apagado ('Goodnight'). Vaga en órbita solar cerca de la Tierra."
+        },
+        {
+          "id": "lunar_prospector_item",
+          "name": "Lunar Prospector",
+          "type": "Orbitador e Impactador Lunar",
+          "mission": "Detección de agua en la Luna",
+          "status": "Impactó cráter Shoemaker (Luna)",
+          "year": "1998 - 1999",
+          "icon": "probe",
+          "image": "https://images-assets.nasa.gov/image/ARC-1998-AC98-0004-1/ARC-1998-AC98-0004-1~thumb.jpg",
+          "shortInfo": "Demostró la presencia de hielo de agua en los polos lunares. Se estrelló deliberadamente en un cráter del polo sur junto con las cenizas del geólogo Eugene Shoemaker."
+        }
+      ]
+    },
+    {
+      "id": "mars",
+      "name": "Marte",
+      "subtitle": "El cementerio robótico rojo",
+      "color": "#ef4444",
+      "radius": 17,
+      "orbitDistance": 285,
+      "orbitalSpeed": 0.011,
+      "image": "https://images-assets.nasa.gov/image/PIA04591/PIA04591~thumb.jpg",
+      "fallbackImage": "mars",
+      "description": "El planeta rojo alberga la mayor colección de artefactos humanos fuera de la Tierra: rovers históricos, módulos de aterrizaje enterrados por el polvo y sondas polares.",
+      "facts": {
+        "Distancia al Sol": "1.52 UA (~228M km)",
+        "Período orbital": "687 días terrestres",
+        "Atmósfera": "CO2 tenue (1% terrestre)",
+        "Hardware detectado": "5 artefactos"
+      },
+      "hardwares": [
+        {
+          "id": "opportunity",
+          "name": "Rover Opportunity (Oppy)",
+          "type": "Rover Geológico de Exploración",
+          "mission": "Búsqueda de huellas de agua líquida",
+          "status": "Silenciado en Meridiani Planum",
+          "year": "2004 - 2018",
+          "icon": "rover",
+          "mass": "185 kg",
+          "power": "Paneles solares de triple unión (140W)",
+          "components": [
+            { "name": "Mástil Pancam & Navcam", "desc": "Cámaras estéreo situadas a 1.5 metros de altura para simular la visión de un geólogo humano." },
+            { "name": "Brazo Robótico (IDD)", "desc": "Brazo con herramienta de abrasión de roca (RAT) y microscopio para analizar hematita ('arándanos marcianos')." },
+            { "name": "Ruedas de Aluminio Rocker-Bogie", "desc": "Sistema de 6 ruedas independientes con suspensión para cruzar rocas y dunas marcianas durante 45 km." },
+            { "name": "Alas de Celdas Solares", "desc": "Superficie de paneles fotovoltaicos que quedaron cubiertos por la gigantesca tormenta global de polvo en 2018." }
+          ],
+          "image": "https://images-assets.nasa.gov/image/PIA18413/PIA18413~thumb.jpg",
+          "shortInfo": "Diseñado para 90 días, sobrevivió casi 15 años recorriendo 45 km. Una gigantesca tormenta de polvo bloqueó sus paneles en 2018. Su último mensaje fue: 'Mi batería está baja y está oscureciendo'."
+        },
+        {
+          "id": "spirit",
+          "name": "Rover Spirit (MER-A)",
+          "type": "Rover Geológico",
+          "mission": "Exploración del cráter Gusev",
+          "status": "Atrapado en arenas de Troya",
+          "year": "2004 - 2010",
+          "icon": "rover",
+          "image": "https://images-assets.nasa.gov/image/PIA11275/PIA11275~thumb.jpg",
+          "shortInfo": "Descubrió evidencia de antiguos manantiales termales hidrotermales. En 2009 quedó atrapado en arenas movedizas y el frío invierno marciano agotó sus calentadores."
+        },
+        {
+          "id": "mars_polar_lander_item",
+          "name": "Mars Polar Lander & DS2",
+          "type": "Aterrizador Polar con Penetradores",
+          "mission": "Clima del casquete polar sur",
+          "status": "Perdido durante el descenso",
+          "year": "1999",
+          "icon": "lander",
+          "image": "https://images-assets.nasa.gov/image/PIA02058/PIA02058~thumb.jpg",
+          "shortInfo": "Se presume que sus motores se apagaron prematuramente a 40 metros de altura debido a un sensor falso en las patas de aterrizaje. Descansa en Planum Australe."
+        },
+        {
+          "id": "pathfinder_sojourner",
+          "name": "Mars Pathfinder & Sojourner",
+          "type": "Estación y Primer Microrover",
+          "mission": "Demostración tecnológica en Marte",
+          "status": "Inerte en Ares Vallis",
+          "year": "1997",
+          "icon": "rover",
+          "image": "https://images-assets.nasa.gov/image/PIA01120/PIA01120~thumb.jpg",
+          "shortInfo": "El primer vehículo rodante de la humanidad en Marte, del tamaño de una caja de zapatos. Operó durante 3 meses enviando 17.000 imágenes antes del fallo de batería."
+        },
+        {
+          "id": "insight_lander",
+          "name": "InSight Lander",
+          "type": "Observatorio Geofísico",
+          "mission": "Estudio del núcleo y terremotos marcianos",
+          "status": "Paneles cubiertos de polvo",
+          "year": "2018 - 2022",
+          "icon": "lander",
+          "image": "https://images-assets.nasa.gov/image/PIA25624/PIA25624~thumb.jpg",
+          "shortInfo": "Detectó más de 1.300 terremotos marcianos ('marsquakes') y cartografió el núcleo líquido de Marte antes de que el polvo marciano cubriera por completo sus celdas solares en 2022."
+        }
+      ]
+    },
+    {
+      "id": "ceres",
+      "name": "Ceres (Cinturón)",
+      "subtitle": "Planeta enano del cinturón de asteroides",
+      "color": "#9ca3af",
+      "radius": 11,
+      "orbitDistance": 340,
+      "orbitalSpeed": 0.0085,
+      "image": "https://images-assets.nasa.gov/image/PIA22477/PIA22477~thumb.jpg",
+      "fallbackImage": "ceres",
+      "description": "El objeto más grande del cinturón de asteroides principal. Contiene un tercio de toda la masa del cinturón y reservas masivas de hielo y sales hidratadas.",
+      "facts": {
+        "Distancia al Sol": "2.77 UA (~414M km)",
+        "Período orbital": "4.6 años terrestres",
+        "Tipo": "Planeta Enano",
+        "Hardware detectado": "1 artefacto"
+      },
+      "hardwares": [
+        {
+          "id": "dawn_ceres",
+          "name": "Dawn (Sonda Iónica)",
+          "type": "Sonda de Propulsión Iónica",
+          "mission": "Exploración de Vesta y Ceres",
+          "status": "Órbita gravitacional eterna",
+          "year": "2007 - 2018",
+          "icon": "probe",
+          "image": "https://images-assets.nasa.gov/image/PIA21927/PIA21927~thumb.jpg",
+          "shortInfo": "Primera nave en orbitar dos mundos distintos fuera de la Tierra. Al agotarse su hidracina, fue dejada en una órbita ultra-estable de Ceres para no contaminar su superficie."
+        }
+      ]
+    },
+    {
+      "id": "jupiter",
+      "name": "Júpiter",
+      "subtitle": "El gigante gaseoso más masivo",
+      "color": "#f97316",
+      "radius": 36,
+      "orbitDistance": 410,
+      "orbitalSpeed": 0.006,
+      "image": "https://images-assets.nasa.gov/image/PIA02873/PIA02873~thumb.jpg",
+      "fallbackImage": "jupiter",
+      "description": "El coloso del Sistema Solar. Su descomunal masa domina gravitatoriamente a los demás planetas y ha servido de catapulta gravitacional para las sondas del espacio profundo.",
+      "facts": {
+        "Distancia al Sol": "5.20 UA (~778M km)",
+        "Período orbital": "11.86 años terrestres",
+        "Lunas conocidas": "95 lunas",
+        "Hardware detectado": "3 artefactos"
+      },
+      "hardwares": [
+        {
+          "id": "galileo_jupiter",
+          "name": "Galileo (Orbitador & Sonda)",
+          "type": "Orbitador y Cápsula Atmosférica",
+          "mission": "Primer orbitador de Júpiter y lunas",
+          "status": "Inmersión deliberada en Júpiter",
+          "year": "1989 - 2003",
+          "icon": "probe",
+          "mass": "2.223 kg",
+          "power": "2 generadores RTG de radioisótopos (570W)",
+          "components": [
+            { "name": "Antena de Alta Ganancia (HGA)", "desc": "Parábola de 4.8m que no se desplegó completamente, obligando a reprogramar la misión con la antena de baja ganancia." },
+            { "name": "Generadores RTG de Plutonio", "desc": "Dos módulos nucleares que proporcionaron energía eléctrica continua lejos del Sol." },
+            { "name": "Sonda Atmosférica de Descenso", "desc": "Cápsula con escudo térmico de carbono que descendió 150 km en la atmósfera joviana a presiones de 23 atmósferas." },
+            { "name": "Cámara SSI & Espectrómetro", "desc": "Instrumentos ópticos que descubrieron el océano bajo la corteza de hielo de Europa." }
+          ],
+          "image": "https://images-assets.nasa.gov/image/PIA00583/PIA00583~thumb.jpg",
+          "shortInfo": "Descubrió un océano subterráneo en la luna Europa. En 2003 fue desorbitado intencionalmente hacia la densa atmósfera de Júpiter a 173.000 km/h para evitar chocar contra Europa."
+        },
+        {
+          "id": "pioneer10_jup",
+          "name": "Pioneer 10",
+          "type": "Explorador de Espacio Profundo",
+          "mission": "Primer sobrevuelo cercano a Júpiter",
+          "status": "Vagando hacia Aldebarán",
+          "year": "1972 - 2003",
+          "icon": "dish",
+          "mass": "258 kg",
+          "power": "4 generadores SNAP-19 RTG (155W)",
+          "components": [
+            { "name": "Placa de Oro de Carl Sagan", "desc": "Grabado pictórico de aluminio anodizado en oro con mensaje a civilizaciones extraterrestres." },
+            { "name": "Antena Parabólica de 2.74 m", "desc": "Antena principal que mantuvo contacto con la Tierra hasta más de 12 mil millones de kilómetros." },
+            { "name": "Mástiles de Generadores RTG", "desc": "Brazos desplegables de 3 metros para aislar los instrumentos científicos de la radiación nuclear." },
+            { "name": "Magnetómetro de Núcleo Saturado", "desc": "Sensor montado en el extremo de un mástil de 6.6m para medir el inmenso campo magnético de Júpiter." }
+          ],
+          "image": "https://images-assets.nasa.gov/image/PIA01404/PIA01404~thumb.jpg",
+          "shortInfo": "Atravesó por primera vez los letales cinturones de radiación de Júpiter en 1973. Lleva la mítica Placa de Oro de Carl Sagan y ahora viaja silenciosa a 136 UA del Sol."
+        },
+        {
+          "id": "ulysses_jup",
+          "name": "Ulysses (ESA / NASA)",
+          "type": "Sonda Heliofísica Polar",
+          "mission": "Exploración de los polos del Sol",
+          "status": "Inerte en órbita heliocéntrica",
+          "year": "1990 - 2009",
+          "icon": "satellite",
+          "mass": "370 kg",
+          "power": "Generador RTG general (283W)",
+          "components": [
+            { "name": "Antena Parabólica de Banda X/S", "desc": "Antena apuntada permanentemente a la Tierra para enviar telemetría del viento solar." },
+            { "name": "Mástil Axial de Ondas de Radio", "desc": "Antena de cinta desplegable de 72.5 metros para medir ondas electromagnéticas." },
+            { "name": "Detector de Polvo Interplanetario", "desc": "Sensor que midió partículas microscópicas cruzando el sistema solar desde el espacio interestelar." }
+          ],
+          "image": "https://images-assets.nasa.gov/image/PIA00446/PIA00446~thumb.jpg",
+          "shortInfo": "Utilizó la tremenda gravedad de Júpiter en 1992 para curvar su trayectoria 80 grados y abandonar el plano del sistema solar para observar los polos solares."
+        }
+      ]
+    },
+    {
+      "id": "saturn",
+      "name": "Saturno",
+      "subtitle": "La joya de los anillos",
+      "color": "#eab308",
+      "radius": 30,
+      "hasRings": true,
+      "orbitDistance": 485,
+      "orbitalSpeed": 0.0045,
+      "image": "https://images-assets.nasa.gov/image/PIA01482/PIA01482~thumb.jpg",
+      "fallbackImage": "saturn",
+      "description": "Famoso por su espectacular sistema de anillos de hielo y polvo. Es un gigante gaseoso compuesto principalmente de hidrógeno y helio con un séquito de más de 140 lunas.",
+      "facts": {
+        "Distancia al Sol": "9.58 UA (~1.43B km)",
+        "Período orbital": "29.45 años terrestres",
+        "Lunas conocidas": "146 lunas",
+        "Hardware detectado": "3 artefactos"
+      },
+      "hardwares": [
+        {
+          "id": "cassini_grand_finale",
+          "name": "Cassini (Grand Finale)",
+          "type": "Orbitador de Saturno",
+          "mission": "13 años explorando Saturno y lunas",
+          "status": "Inmersión suicida en Saturno",
+          "year": "1997 - 2017",
+          "icon": "dish",
+          "mass": "5.712 kg",
+          "power": "3 generadores GPHS-RTG de Plutonio (885W)",
+          "components": [
+            { "name": "Antena HGA de 4 metros", "desc": "Plato reflector gigante utilizado para transmitir gigabytes de fotos de los anillos y como escudo contra micrometeoritos." },
+            { "name": "Mástil Magnetómetro de 11 metros", "desc": "Brazo desplegable para medir el campo magnético casi perfectamente alineado de Saturno." },
+            { "name": "Motor Principal bipropelente R-4D", "desc": "Propulsor de 490 Newtons que ejecutó la frenada para la inserción en la órbita de Saturno en 2004." },
+            { "name": "Módulo de desacoplamiento Huygens", "desc": "Anillo eyector pirotécnico que liberó la sonda europea Huygens hacia la luna Titán." }
+          ],
+          "image": "https://images-assets.nasa.gov/image/PIA21345/PIA21345~thumb.jpg",
+          "shortInfo": "Descubrió géiseres de agua salada en Encélado y lagos de metano en Titán. En su 'Grand Finale' en 2017 se zambulló en la atmósfera de Saturno mientras transmitía datos hasta el último segundo."
+        },
+        {
+          "id": "huygens_titan",
+          "name": "Sonda Huygens (ESA/NASA)",
+          "type": "Módulo de Aterrizaje en Titán",
+          "mission": "Primer aterrizaje en el sistema solar exterior",
+          "status": "Inerte en la superficie de Titán",
+          "year": "1997 - 2005",
+          "icon": "lander",
+          "image": "https://images-assets.nasa.gov/image/PIA07231/PIA07231~thumb.jpg",
+          "shortInfo": "Descendió con paracaídas a través de la densa niebla de Titán en enero de 2005. Fotografió lechos de ríos secos y cantos rodados de hielo antes de que sus baterías se congelaran."
+        },
+        {
+          "id": "pioneer11_sat",
+          "name": "Pioneer 11",
+          "type": "Sonda Interestelar",
+          "mission": "Primer sobrevuelo a Saturno",
+          "status": "Silencio interestelar hacia Aquila",
+          "year": "1973 - 1995",
+          "icon": "dish",
+          "image": "https://images-assets.nasa.gov/image/PIA01402/PIA01402~thumb.jpg",
+          "shortInfo": "Primera nave en rozar los anillos de Saturno y descubrir el anillo F en 1979. Su última transmisión fue recibida en 1995 cuando se quedó sin combustible de orientación."
+        }
+      ]
+    },
+    {
+      "id": "uranus",
+      "name": "Urano",
+      "subtitle": "El gigante de hielo inclinado",
+      "color": "#06b6d4",
+      "radius": 22,
+      "hasRings": true,
+      "orbitDistance": 555,
+      "orbitalSpeed": 0.003,
+      "image": "https://images-assets.nasa.gov/image/PIA18182/PIA18182~thumb.jpg",
+      "fallbackImage": "uranus",
+      "description": "Un gigante helado con una inclinación axial extrema de 98 grados, lo que hace que prácticamente ruede sobre el plano de su órbita alrededor del Sol.",
+      "facts": {
+        "Distancia al Sol": "19.2 UA (~2.87B km)",
+        "Período orbital": "84 años terrestres",
+        "Temperatura": "-224°C",
+        "Hardware detectado": "1 artefacto"
+      },
+      "hardwares": [
+        {
+          "id": "voyager2_uranus",
+          "name": "Voyager 2 (Sobrevuelo)",
+          "type": "Sonda Interestelar",
+          "mission": "El 'Grand Tour' de los gigantes",
+          "status": "Cruzó la heliopausa (Espacio Interestelar)",
+          "year": "1977 - Presente",
+          "icon": "dish",
+          "image": "https://images-assets.nasa.gov/image/PIA01492/PIA01492~thumb.jpg",
+          "shortInfo": "La única nave espacial humana que ha visitado Urano en toda la historia (enero de 1986). Descubrió 10 nuevas lunas, dos nuevos anillos y su extraño campo magnético torcido."
+        }
+      ]
+    },
+    {
+      "id": "neptune",
+      "name": "Neptuno",
+      "subtitle": "El mundo de los vientos supersónicos",
+      "color": "#2563eb",
+      "radius": 21,
+      "orbitDistance": 620,
+      "orbitalSpeed": 0.0022,
+      "image": "https://images-assets.nasa.gov/image/PIA01492/PIA01492~thumb.jpg",
+      "fallbackImage": "neptune",
+      "description": "El planeta más remoto del Sistema Solar. Su atmósfera azul intensa de metano es azotada por los vientos más violentos del sistema, superando los 2.100 km/h.",
+      "facts": {
+        "Distancia al Sol": "30.07 UA (~4.5B km)",
+        "Período orbital": "164.8 años terrestres",
+        "Temperatura": "-218°C",
+        "Hardware detectado": "1 artefacto"
+      },
+      "hardwares": [
+        {
+          "id": "voyager2_neptune",
+          "name": "Voyager 2 (Sobrevuelo)",
+          "type": "Sonda Interestelar",
+          "mission": "Sobrevuelo histórico de Neptuno",
+          "status": "Navegando el medio interestelar",
+          "year": "1977 - Presente",
+          "icon": "dish",
+          "image": "https://images-assets.nasa.gov/image/PIA00046/PIA00046~thumb.jpg",
+          "shortInfo": "En agosto de 1989 pasó a solo 4.950 km del polo norte de Neptuno. Descubrió la Gran Mancha Oscura y géiseres activos de nitrógeno líquido en la luna helada Tritón."
+        }
+      ]
+    }
+  ]
+}
